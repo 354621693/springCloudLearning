@@ -9,7 +9,6 @@
     <version>1.0.0</version>
     <url>https://github.com/354621693</url>
     <name>Spring Cloud Training Project</name>
-
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
