@@ -30,6 +30,7 @@
     <modules>
         <module>rokectmq</module>
         <module>db</module>
+        <module>kafkaLearn</module>
     </modules>
 
     <dependencyManagement>
