@@ -28,6 +28,7 @@
     </parent>
 
     <modules>
+        <module>rokectmq</module>
         <module>db</module>
     </modules>
 
