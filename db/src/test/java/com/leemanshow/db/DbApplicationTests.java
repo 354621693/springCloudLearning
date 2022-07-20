@@ -1,6 +1,6 @@
 package com.leemanshow.db;
 
-import com.leemanshow.db.config.DdlScript;
+//import com.leemanshow.db.config.DdlScript;
 import com.leemanshow.db.entity.TestData;
 import com.leemanshow.db.enums.TestEnum;
 import com.leemanshow.db.mapper.TestDataMapper;
@@ -20,8 +20,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class DbApplicationTests {
     @Resource
     private TestDataMapper testDataMapper;
-    @Resource
-    private DdlScript ddlScript;
+//    @Resource
+//    private DdlScript ddlScript;
 
     @Test
     void contextLoads() {
