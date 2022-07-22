@@ -1,7 +1,8 @@
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://114.132.175.198:3306/manshow?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:p6spy:mysql://114.132.175.198:3306/manshow?useSSL=false&useUnicode=true&characterEncoding=UTF-8
     username: manshowapp
     password: Manshow!123
 
