@@ -6,9 +6,7 @@
         <groupId>com.leemanshow</groupId>
         <artifactId>springCloudLearning</artifactId>
         <version>1.0.0</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
     <artifactId>kafkaLearn</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>kafkaLearn</name>
