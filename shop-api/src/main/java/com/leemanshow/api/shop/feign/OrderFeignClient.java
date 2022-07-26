@@ -8,5 +8,5 @@ import org.springframework.cloud.openfeign.FeignClient;
  */
 @FeignClient(name = "shop-order",contextId = "order")
 public interface OrderFeignClient {
-    ShopResponseVO<>
+    ShopResponseVO<List<OrderInfo>> getOrderList(OrderSearchDTO orderSearchDTO)
 }
