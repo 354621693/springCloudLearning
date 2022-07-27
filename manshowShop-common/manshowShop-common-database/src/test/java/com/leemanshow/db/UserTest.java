@@ -7,7 +7,6 @@ import com.github.pagehelper.PageInfo;
 import com.leemanshow.db.entity.User;
 import com.leemanshow.db.mapper.TestDataMapper;
 import com.leemanshow.db.mapper.UserMapper;
-import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

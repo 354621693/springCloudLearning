@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.leemanshow</groupId>
-        <artifactId>springCloudLearning</artifactId>
+        <artifactId>manshowShop-commom</artifactId>
         <version>1.0.0</version>
 <!--        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
     </parent>
-    <artifactId>db</artifactId>
+    <artifactId>manshowShop-common-database</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>db</name>
     <description>db</description>

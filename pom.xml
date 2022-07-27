@@ -34,10 +34,10 @@
     </parent>
 
     <modules>
-        <module>db</module>
         <module>kafkaLearn</module>
         <module>shop-api</module>
-        <module>shop-common</module>
+        <module>manshowShop-common</module>
+        <module>manshowShop-order</module>
     </modules>
 
     <dependencyManagement>
