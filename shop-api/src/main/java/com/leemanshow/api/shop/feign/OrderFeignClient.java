@@ -2,7 +2,7 @@ package com.leemanshow.api.shop.feign;
 
 import com.leemanshow.api.shop.vo.OrderAmountVO;
 import org.springframework.cloud.openfeign.FeignClient;
-import response.ServerResponseVO;
+import com.leemanshow.manshowShop.common.response.ServerResponseVO;
 
 import java.util.List;
 
@@ -12,6 +12,5 @@ import java.util.List;
  */
 @FeignClient(name = "shop-order",contextId = "order")
 public interface OrderFeignClient {
-
     ServerResponseVO<OrderAmountVO> getOrderList(List<Integer> orderIds);
 }

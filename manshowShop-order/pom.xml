@@ -18,14 +18,14 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <groupId>com.leemanshow</groupId>
+            <artifactId>manshowShop-common-database</artifactId>
+            <version>1.0.0</version>
         </dependency>
-
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <groupId>com.leemanshow</groupId>
+            <artifactId>manshowShop-common-security</artifactId>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
 

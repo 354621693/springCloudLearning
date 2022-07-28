@@ -20,6 +20,7 @@
     <modules>
         <module>manshowShop-common-core</module>
         <module>manshowShop-common-database</module>
+        <module>manshowShop-common-security</module>
     </modules>
 
 </project>

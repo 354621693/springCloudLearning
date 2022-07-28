@@ -1,13 +1,13 @@
-package com.leemanshow.db;
+package com.leemanshow.manshowshop.order;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DbApplication {
+public class ManshowShopOrderApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DbApplication.class, args);
+        SpringApplication.run(ManshowShopOrderApplication.class, args);
     }
 
 }
