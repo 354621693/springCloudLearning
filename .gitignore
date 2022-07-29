@@ -27,9 +27,9 @@ buildNumber.properties
 ### Mac ###
 .DS_Store
 
-/dbcommon/.mvn/wrapper/maven-wrapper.jar
-/dbcommon/.mvn/wrapper/maven-wrapper.properties
-/dbcommon/mvnw
-/dbcommon/mvnw.cmd
-/dbcommon/pom.xml
-/dbcommon/.mvn/wrapper/maven-wrapper.jar
+**/.mvn/wrapper/maven-wrapper.jar
+**/.mvn/wrapper/maven-wrapper.properties
+**/mvnw
+**/mvnw.cmd
+**/.mvn/wrapper/maven-wrapper.jar
+

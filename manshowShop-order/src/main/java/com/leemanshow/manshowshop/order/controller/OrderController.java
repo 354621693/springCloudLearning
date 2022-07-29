@@ -1,8 +1,11 @@
 package com.leemanshow.manshowshop.order.controller;
 
 import com.leemanshow.manshowShop.common.response.ServerResponseVO;
-import com.leemanshow.manshowshop.order.dto.OrderDTO;
+import com.leemanshow.manshowshop.order.dto.CreateOrderRequestDTO;
+import com.leemanshow.manshowshop.order.factory.OrderPipelineFactory;
+import com.leemanshow.manshowshop.order.service.OrderService;
 import com.leemanshow.manshowshop.order.vo.OrderCreateVO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,17 +19,25 @@ import javax.validation.Valid;
 @RestController("/shop/order")
 public class OrderController {
 
+    @Autowired
+    OrderPipelineFactory orderPipelineFactory;
+
+    @Autowired
+    OrderService orderService;
+
     /**
-     *          //1、检查库存
-     *         //2、生成订单
-     *         //3、清除购物车
-     *         //4、发送短信
-     *         //5、加入延迟队列，超时取消订单
+     * //1、检查库存
+     * //2、生成订单
+     * //3、清除购物车
+     * //4、发送短信
+     * //5、加入延迟队列，超时取消订单
+     *
      * @param orderDTO
      * @return
      */
     @PostMapping("/createOrder")
-    public ServerResponseVO<OrderCreateVO> createOrder(@Valid @RequestBody OrderDTO orderDTO){
-        return null;
+    public ServerResponseVO<OrderCreateVO> createOrder(@Valid @RequestBody CreateOrderRequestDTO orderDTO) {
+        OrderCreateVO orderCreateVO = orderService.createOrder(orderDTO);
+        return ServerResponseVO.success(orderCreateVO);
     }
 }
