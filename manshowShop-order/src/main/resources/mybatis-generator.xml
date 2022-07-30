@@ -62,8 +62,7 @@
 <!--        <table tableName="goods_sale_dq"></table>-->
 <!--        <table tableName="goods_h5_dq"></table>-->
 <!--        <table tableName="goods_sale_prices_flow"></table>-->
-        <table tableName="cart_info"></table>
-        <table tableName="order_info"></table>
-        <table tableName="products_info"></table>
+        <table tableName="goods_info"></table>
+        <table tableName="shop_info"></table>
     </context>
 </generatorConfiguration>

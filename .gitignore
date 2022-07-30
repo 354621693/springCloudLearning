@@ -33,3 +33,5 @@ buildNumber.properties
 **/mvnw.cmd
 **/.mvn/wrapper/maven-wrapper.jar
 
+/kafkaLearn/.mvn/wrapper/maven-wrapper.jar
+/out/production/streamLrean/StreamLearnAndTest.class

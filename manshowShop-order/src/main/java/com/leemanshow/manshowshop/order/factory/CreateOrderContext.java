@@ -1,7 +1,10 @@
 package com.leemanshow.manshowshop.order.factory;
 
 import com.leemanshow.manshowShop.common.core.context.AbstractHandlerContext;
+import com.leemanshow.manshowshop.order.dto.SingleProductOrderDTO;
 import lombok.Data;
+
+import java.util.List;
 
 /**
  * @author leewencan
@@ -9,10 +12,11 @@ import lombok.Data;
  */
 @Data
 public class CreateOrderContext extends AbstractHandlerContext {
-    int orderId;
-    int addressId;
-    int deliveryType;
-    int amount;
-    int status;
-    int userId;
+    private List<SingleProductOrderDTO> productOrderDTO;
+    private int orderId;
+    private int addressId;
+    private int deliveryType;
+    private int amount;
+    private int status;
+    private int userId;
 }

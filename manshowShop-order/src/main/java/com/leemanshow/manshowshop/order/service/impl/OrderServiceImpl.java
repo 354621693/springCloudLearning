@@ -19,6 +19,16 @@ import org.springframework.stereotype.Service;
 public class OrderServiceImpl implements OrderService {
     @Autowired
     OrderPipelineFactory orderPipelineFactory;
+
+    /**
+     *        //1、检查库存
+     *      * //2、生成订单
+     *      * //3、清除购物车
+     *      * //4、发送短信
+     *      * //5、加入延迟队列，超时取消订单
+     * @param orderDTO
+     * @return
+     */
     @Override
     public OrderCreateVO createOrder(CreateOrderRequestDTO orderDTO) {
         BizInvoker build = orderPipelineFactory.build(orderDTO);

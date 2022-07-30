@@ -9,19 +9,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>shop-api</artifactId>
+    <artifactId>manshowShop-api</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>manshowShop-api-products</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>com.leemanshow</groupId>
-            <artifactId>manshowShop-common-core</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-    </dependencies>
 
 </project>

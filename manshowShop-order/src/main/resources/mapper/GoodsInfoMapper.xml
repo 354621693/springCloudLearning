@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.leemanshow.manshowshop.order.mapper.GoodsInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.leemanshow.manshowshop.order.entity.GoodsInfo" >
+    <id column="sku" property="sku" jdbcType="INTEGER" />
+    <result column="price" property="price" jdbcType="INTEGER" />
+    <result column="inventory" property="inventory" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="shop_id" property="shopId" jdbcType="INTEGER" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="spu_id" property="spuId" jdbcType="INTEGER" />
+    <result column="image" property="image" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="ext_1" property="ext1" jdbcType="VARCHAR" />
+    <result column="ext_2" property="ext2" jdbcType="VARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from goods_info
+    where sku = #{sku,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.leemanshow.manshowshop.order.entity.GoodsInfo" >
+    insert into goods_info (sku, price, inventory, 
+      create_time, shop_id, update_time, 
+      spu_id, image, name, 
+      ext_1, ext_2)
+    values (#{sku,jdbcType=INTEGER}, #{price,jdbcType=INTEGER}, #{inventory,jdbcType=INTEGER}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{shopId,jdbcType=INTEGER}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{spuId,jdbcType=INTEGER}, #{image,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{ext1,jdbcType=VARCHAR}, #{ext2,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.leemanshow.manshowshop.order.entity.GoodsInfo" >
+    update goods_info
+    set price = #{price,jdbcType=INTEGER},
+      inventory = #{inventory,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      shop_id = #{shopId,jdbcType=INTEGER},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      spu_id = #{spuId,jdbcType=INTEGER},
+      image = #{image,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      ext_1 = #{ext1,jdbcType=VARCHAR},
+      ext_2 = #{ext2,jdbcType=VARCHAR}
+    where sku = #{sku,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select sku, price, inventory, create_time, shop_id, update_time, spu_id, image, name, 
+    ext_1, ext_2
+    from goods_info
+    where sku = #{sku,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select sku, price, inventory, create_time, shop_id, update_time, spu_id, image, name, 
+    ext_1, ext_2
+    from goods_info
+  </select>
+</mapper>

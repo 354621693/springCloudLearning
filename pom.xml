@@ -36,9 +36,10 @@
 
     <modules>
         <module>kafkaLearn</module>
-        <module>shop-api</module>
+        <module>manshowShop-api</module>
         <module>manshowShop-common</module>
         <module>manshowShop-order</module>
+        <module>manshowShop-api</module>
     </modules>
 
     <dependencyManagement>

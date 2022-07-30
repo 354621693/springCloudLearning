@@ -1,7 +1,7 @@
 package com.leemanshow.manshowshop.order;
 
-import com.leemanshow.database.entity.OrderInfo;
-import com.leemanshow.database.mapper.OrderInfoMapper;
+import com.leemanshow.manshowshop.order.entity.OrderInfo;
+import com.leemanshow.manshowshop.order.mapper.OrderInfoMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

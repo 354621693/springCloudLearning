@@ -2,7 +2,11 @@ package com.leemanshow.manshowshop.order.handler;
 
 import com.leemanshow.manshowShop.common.core.context.BizHandlerContext;
 import com.leemanshow.manshowShop.common.core.handler.AbstractHandler;
+import com.leemanshow.manshowshop.order.dto.SingleProductOrderDTO;
+import com.leemanshow.manshowshop.order.factory.CreateOrderContext;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @author leewencan
@@ -11,8 +15,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class OrderCheckHandler extends AbstractHandler {
 
+
     @Override
     public boolean handle(BizHandlerContext context) {
+        CreateOrderContext orderContext = (CreateOrderContext) context;
+        List<SingleProductOrderDTO> productOrderDTO = orderContext.getProductOrderDTO();
         return false;
     }
 }
