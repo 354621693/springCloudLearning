@@ -12,6 +12,9 @@ import com.leemanshow.manshowshop.order.vo.OrderCreateVO;
 public class CreateOrderConvert implements TransConvert {
     @Override
     public ServerBaseVO convertToResponse(BizHandlerContext context) {
-        return new OrderCreateVO();
+        CreateOrderContext orderContext = (CreateOrderContext) context;
+        OrderCreateVO result = new OrderCreateVO();
+        result.setOrderId(orderContext.getOrderId());
+        return result;
     }
 }
