@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+    #    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:p6spy:mysql://114.132.175.198:3306/manshow?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: manshowapp
+    password: Manshow!123
+
+# Mybatis Mate ??
+mybatis-mate:
+  cert:
+    grant: thisIsTestLicense
+    license: as/bsBaSVrsA9FfjC/N77ruEt2/QZDrW+MHETNuEuZBra5mlaXZU+DE1ZvF8UjzlLCpH3TFVH3WPV+Ya7Ugiz1Rx4wSh/FK6Ug9lhos7rnsNaRB/+mR30aXqtlLt4dAmLAOCT56r9mikW+t1DDJY8TVhERWMjEipbqGO9oe1fqYCegCEX8tVCpToKr5J1g1V86mNsNnEGXujnLlEw9jBTrGxAyQroD7Ns1Dhwz1K4Y188mvmRQp9t7OYrpgsC7N9CXq1s1c2GtvfItHArkqHE4oDrhaPjpbMjFWLI5/XqZDtW3D+AVcH7pTcYZn6vzFfDZEmfDFV5fQlT3Rc+GENEg==
+
+# Logger Config
+logging:
+  level:
+    com.baomidou.mybatisplus.samples.mysql: debug
+
+server:
+  port: 1409

@@ -1,6 +1,7 @@
 package com.leemanshow.manshowShop.common.response;
 
 import lombok.Data;
+import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.Serializable;
@@ -11,6 +12,7 @@ import java.io.Serializable;
  */
 @Slf4j
 @Data
+@ToString
 public class ServerResponseVO<T> implements Serializable {
     private String code;
     private String msg;

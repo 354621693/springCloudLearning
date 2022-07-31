@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>manshowShop-api-products</module>
+        <module>manshowShop-api-goods</module>
     </modules>
 
     <properties>

@@ -1,4 +1,4 @@
-package com.leemanshow.manshowshop.order.entity;
+package com.leemanshow.manshowshop.products.entity;
 
 public class ProductsInfo {
     private Integer id;

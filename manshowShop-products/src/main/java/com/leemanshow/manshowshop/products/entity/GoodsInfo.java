@@ -1,4 +1,4 @@
-package com.leemanshow.manshowshop.order.entity;
+package com.leemanshow.manshowshop.products.entity;
 
 import java.util.Date;
 
@@ -7,7 +7,7 @@ public class GoodsInfo {
 
     private Integer price;
 
-    private Integer inventory;
+    private Integer stock;
 
     private Date createTime;
 
@@ -42,11 +42,11 @@ public class GoodsInfo {
     }
 
     public Integer getInventory() {
-        return inventory;
+        return stock;
     }
 
     public void setInventory(Integer inventory) {
-        this.inventory = inventory;
+        this.stock = inventory;
     }
 
     public Date getCreateTime() {

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.leemanshow.manshowshop.order.mapper.GoodsInfoMapper" >
-  <resultMap id="BaseResultMap" type="com.leemanshow.manshowshop.order.entity.GoodsInfo" >
+<mapper namespace="com.leemanshow.manshowshop.products.mapper.GoodsInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.leemanshow.manshowshop.products.entity.GoodsInfo" >
     <id column="sku" property="sku" jdbcType="INTEGER" />
     <result column="price" property="price" jdbcType="INTEGER" />
-    <result column="inventory" property="inventory" jdbcType="INTEGER" />
+    <result column="inventory" property="stock" jdbcType="INTEGER" />
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="shop_id" property="shopId" jdbcType="INTEGER" />
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
@@ -18,17 +18,17 @@
     delete from goods_info
     where sku = #{sku,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.leemanshow.manshowshop.order.entity.GoodsInfo" >
-    insert into goods_info (sku, price, inventory, 
-      create_time, shop_id, update_time, 
-      spu_id, image, name, 
+  <insert id="insert" parameterType="com.leemanshow.manshowshop.products.entity.GoodsInfo" >
+    insert into goods_info (sku, price, inventory,
+      create_time, shop_id, update_time,
+      spu_id, image, name,
       ext_1, ext_2)
-    values (#{sku,jdbcType=INTEGER}, #{price,jdbcType=INTEGER}, #{inventory,jdbcType=INTEGER}, 
-      #{createTime,jdbcType=TIMESTAMP}, #{shopId,jdbcType=INTEGER}, #{updateTime,jdbcType=TIMESTAMP}, 
-      #{spuId,jdbcType=INTEGER}, #{image,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+    values (#{sku,jdbcType=INTEGER}, #{price,jdbcType=INTEGER}, #{inventory,jdbcType=INTEGER},
+      #{createTime,jdbcType=TIMESTAMP}, #{shopId,jdbcType=INTEGER}, #{updateTime,jdbcType=TIMESTAMP},
+      #{spuId,jdbcType=INTEGER}, #{image,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR},
       #{ext1,jdbcType=VARCHAR}, #{ext2,jdbcType=VARCHAR})
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.leemanshow.manshowshop.order.entity.GoodsInfo" >
+  <update id="updateByPrimaryKey" parameterType="com.leemanshow.manshowshop.products.entity.GoodsInfo" >
     update goods_info
     set price = #{price,jdbcType=INTEGER},
       inventory = #{inventory,jdbcType=INTEGER},
@@ -43,14 +43,21 @@
     where sku = #{sku,jdbcType=INTEGER}
   </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select sku, price, inventory, create_time, shop_id, update_time, spu_id, image, name, 
+    select sku, price, inventory, create_time, shop_id, update_time, spu_id, image, name,
     ext_1, ext_2
     from goods_info
     where sku = #{sku,jdbcType=INTEGER}
   </select>
   <select id="selectAll" resultMap="BaseResultMap" >
-    select sku, price, inventory, create_time, shop_id, update_time, spu_id, image, name, 
+    select sku, price, inventory, create_time, shop_id, update_time, spu_id, image, name,
     ext_1, ext_2
     from goods_info
+  </select>
+  <select id="getStocksBySkus" resultType="com.leemanshow.api.products.vo.GoodsStockVO">
+    select sku, inventory
+    from goods_info where sku in
+    <foreach collection="skus" item="sku" separator="," open="(" close=")">
+      #{sku}
+    </foreach>
   </select>
 </mapper>

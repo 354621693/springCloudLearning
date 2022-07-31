@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.leemanshow.manshowshop.order.mapper.ProductsInfoMapper" >
-  <resultMap id="BaseResultMap" type="com.leemanshow.manshowshop.order.entity.ProductsInfo" >
+<mapper namespace="com.leemanshow.manshowshop.products.mapper.ProductsInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.leemanshow.manshowshop.products.entity.ProductsInfo" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="order_id" property="orderId" jdbcType="INTEGER" />
     <result column="sku" property="sku" jdbcType="VARCHAR" />
@@ -18,7 +18,7 @@
     delete from products_info
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.leemanshow.manshowshop.order.entity.ProductsInfo" >
+  <insert id="insert" parameterType="com.leemanshow.manshowshop.products.entity.ProductsInfo" >
     insert into products_info (id, order_id, sku, 
       product_name, supply_id, price, 
       amount, discount_amount, receivable, 
@@ -28,7 +28,7 @@
       #{amount,jdbcType=INTEGER}, #{discountAmount,jdbcType=INTEGER}, #{receivable,jdbcType=INTEGER}, 
       #{actualPay,jdbcType=INTEGER}, #{status,jdbcType=INTEGER})
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.leemanshow.manshowshop.order.entity.ProductsInfo" >
+  <update id="updateByPrimaryKey" parameterType="com.leemanshow.manshowshop.products.entity.ProductsInfo" >
     update products_info
     set order_id = #{orderId,jdbcType=INTEGER},
       sku = #{sku,jdbcType=VARCHAR},
@@ -52,5 +52,7 @@
     select id, order_id, sku, product_name, supply_id, price, amount, discount_amount, 
     receivable, actual_pay, status
     from products_info
+  </select>
+  <select id="selectList" resultType="com.leemanshow.api.products.vo.GoodsStockVO">
   </select>
 </mapper>
