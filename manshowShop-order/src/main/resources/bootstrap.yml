@@ -1,0 +1,16 @@
+server:
+  port: 1408
+spring:
+  application:
+    name: manshowShop-order
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.110.156:8848
+        namespace: @nacos.namespace@
+      config:
+        namespace: @nacos.namespace@
+        server-addr: 192.168.110.156:8848
+        file-extension: yml
+    inetutils:
+      preferred-networks: 192.168.110

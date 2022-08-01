@@ -1,5 +1,6 @@
 package com.leemanshow.manshowshop.order.handler;
 
+import com.leemanshow.api.products.feign.GoodsFeignClient;
 import com.leemanshow.manshowShop.common.core.context.BizHandlerContext;
 import com.leemanshow.manshowShop.common.core.handler.AbstractHandler;
 import com.leemanshow.manshowshop.order.dto.SingleProductOrderDTO;
@@ -17,7 +18,7 @@ import java.util.List;
 public class OrderCheckHandler extends AbstractHandler {
 
     @Autowired
-
+    GoodsFeignClient goodsFeignClient;
 
     @Override
     public boolean handle(BizHandlerContext context) {

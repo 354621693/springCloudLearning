@@ -54,7 +54,7 @@
     from goods_info
   </select>
   <select id="getStocksBySkus" resultType="com.leemanshow.api.products.vo.GoodsStockVO">
-    select sku, inventory
+    select sku, inventory as stock
     from goods_info where sku in
     <foreach collection="skus" item="sku" separator="," open="(" close=")">
       #{sku}
