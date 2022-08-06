@@ -9,9 +9,8 @@ import lombok.ToString;
  * @author leewencan
  * @date 2022/7/28 11:38
  */
-@EqualsAndHashCode(callSuper = true)
 @ToString
 @Data
-public class OrderCreateVO extends ServerBaseVO {
+public class OrderCreateVO implements ServerBaseVO {
     private int orderId;
 }

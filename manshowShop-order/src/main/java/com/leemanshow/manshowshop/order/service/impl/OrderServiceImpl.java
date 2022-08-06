@@ -4,6 +4,7 @@ import com.leemanshow.manshowShop.common.core.context.AbstractHandlerContext;
 import com.leemanshow.manshowShop.common.core.context.BizHandlerContext;
 import com.leemanshow.manshowShop.common.core.convert.TransConvert;
 import com.leemanshow.manshowShop.common.core.pipeline.BizInvoker;
+import com.leemanshow.manshowShop.common.response.vo.ServerBaseVO;
 import com.leemanshow.manshowshop.order.dto.CreateOrderRequestDTO;
 import com.leemanshow.manshowshop.order.factory.OrderPipelineFactory;
 import com.leemanshow.manshowshop.order.service.OrderService;
@@ -35,7 +36,7 @@ public class OrderServiceImpl implements OrderService {
         build.start();
         AbstractHandlerContext context = build.getContext();
         TransConvert convert = context.getConvert();
-        Object o = convert.convertToResponse(context);
-        return null;
+        ServerBaseVO serverBaseVO = convert.convertToResponse(context);
+        return (OrderCreateVO) serverBaseVO;
     }
 }

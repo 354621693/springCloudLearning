@@ -20,14 +20,14 @@ public class SingleProductOrderDTO {
      */
     @NotBlank(message = "商品spu不能为空")
     @ApiModelProperty(value = "spu", required = true)
-    private String spuId;
+    private Integer spuId;
 
     /**
      * 商品id
      */
     @ApiModelProperty(value = "商品id", required = true)
     @NotBlank(message = "商品id不能为空")
-    private String skuId;
+    private Integer skuId;
 
     @Min(value = 1, message = "商品数量不能为空")
     @ApiModelProperty(value = "数量", required = true)

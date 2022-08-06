@@ -7,6 +7,7 @@ import com.leemanshow.manshowShop.common.core.pipeline.BizPipeline;
 import com.leemanshow.manshowShop.common.securty.AuthUserContext;
 import com.leemanshow.manshowshop.order.dto.CreateOrderRequestDTO;
 import com.leemanshow.manshowshop.order.handler.OrderCheckHandler;
+import com.leemanshow.manshowshop.order.handler.OrderCreateHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -19,6 +20,9 @@ public class OrderPipelineFactory extends AbstractDefaultPipelineFactory<CreateO
 
     @Autowired
     OrderCheckHandler orderCheckHandler;
+
+    @Autowired
+    OrderCreateHandler orderCreateHandler;
 
     @Override
     protected TransConvert createConvert() {
