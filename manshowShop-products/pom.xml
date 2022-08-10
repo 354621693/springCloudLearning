@@ -8,7 +8,6 @@
         <version>1.0.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.leemanshow</groupId>
     <artifactId>manshowShop-products</artifactId>
     <name>manshowShop-products</name>
     <description>manshowShop-products</description>
@@ -34,11 +33,6 @@
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
         <dependency>
             <groupId>com.leemanshow</groupId>
             <artifactId>manshowShop-api-products</artifactId>
